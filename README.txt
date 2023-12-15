@@ -12,3 +12,5 @@ API Links: https://rapidapi.com/api-sports/api/api-basketball/details
 YouTube Demo Link: https://youtu.be/QmlGxYdEH1Y
 
 Render Link: https://finalproject-xcu0.onrender.com/
+
+gitHub Link: https://github.com/pyeates/FinalProject
