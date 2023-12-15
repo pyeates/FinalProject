@@ -167,6 +167,7 @@ app.post("/",  async (request, response) => {
     await updatePerson(databaseAndCollection, name, newTeam)
   }
   try {
+    //API fetching and parsing
     const response = await fetch(url, options);
     const result = await response.json();
     variables = {
