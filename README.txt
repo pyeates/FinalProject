@@ -14,3 +14,6 @@ YouTube Demo Link: https://youtu.be/QmlGxYdEH1Y
 Render Link: https://finalproject-xcu0.onrender.com/
 
 gitHub Link: https://github.com/pyeates/FinalProject
+
+NOTE: submission did not work on the submit server as it was too big, files were removed in order
+to fit into the submission server, utilize the github to see all files.
