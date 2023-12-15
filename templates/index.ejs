@@ -6,6 +6,65 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome to the NBA Statistics Website</h1>
+    <style>
+        body {
+            text-align: center;
+        }
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <h1>Welcome to the NBA Statistics Website</h1>         
+        <form action="http://localhost:<%- portNumber %>/" method="post">
+            Enter Your Name: <input type="text" name="name" id="name" placeholder="First Name Last Name" required> <br><br>
+            Choose Your Favorite Team: <select name="teamOptions"id="teamOptions" required>
+                    <option value="Atlanta Hawks">Atlanta Hawks</options>
+                    <option value="Boston Celtics">Boston Celtics</options>
+                    <option value="Brooklyn Nets">Brooklyn Nets</options>
+                    <option value="Charlotte Hornets">Charlotte Hornets</options>
+                    <option value="Chicago Bulls">Chicago Bulls</options>
+                    <option value="Cleveland Cavaliers">Cleveland Cavaliers</options>
+                    <option value="Dallas Mavericks">Dallas Mavericks</options>
+                    <option value="Denver Nuggets">Denver Nuggets</options>
+                    <option value="Detroit Pistons">Detroit Pistons</options>
+                    <option value="Golden State Warriors">Golden State Warriors</options>
+                    <option value="Houston Rockets">Houston Rockets</options>
+                    <option value="Indiana Pacers">Indiana Pacers</options>
+                    <option value="Los Angeles Clippers">Los Angeles Clippers</options>
+                    <option value="Los Angeles Lakers">Los Angeles Lakers</options>
+                    <option value="Memphis Grizzlies">Memphis Grizzlies</options>
+                    <option value="Miami Heat">Miami Heat</options>
+                    <option value="Milwaukee Bucks">Milwaukee Bucks</options>
+                    <option value="Minnesota Timberwolves">Minnesota Timberwolves</options>
+                    <option value="New Orleans Pelicans">New Orleans Pelicans</options>
+                    <option value="New York Knicks">New York Knicks</options>
+                    <option value="Oklahoma City Thunder">Oklahoma City Thunder</options>
+                    <option value="Orlando Magic">Orlando Magic</options>
+                    <option value="Philadelphia 76ers">Philadelphia 76ers</options>
+                    <option value="Phoenix Suns">Phoenix Suns</options>
+                    <option value="Portland Trail Blazers">Portland Trail Blazers</options>
+                    <option value="Sacramento Kings">Sacramento Kings</options>
+                    <option value="San Antonio Spurs">San Antonio Spurs</options>
+                    <option value="Toronto Raptors">Toronto Raptors</options>
+                    <option value="Utah Jazz">Utah Jazz</options>
+                    <option value="Washington Wizards">Washington Wizards</options>
+            </select>
+            <br><br>
+            Choose a Season: <select name="seasonOptions"id="seasonOptions" required>
+                <option value="2020-2021">2020-2021</option>
+                <option value="2021-2022">2021-2022</option>
+                <option value="2022-2023">2022-2023</option>
+                <option value="Current Season">Current Season</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Click to get Statistics">
+        </form>    
+
+        <br>
+        <h2>Here is everyone's favorite Teams!</h2>
+        <table>
+            <%- tableString %>
+        </table>
 </body>
 </html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        table, tr, th, td {
+            border: 1px solid;
+        }
+        span {
+            color: blue
+        }
+        body {
+            text-align: center;
+        }
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <h1>Statistics for <span><%- team %></span></h1>
+    <table>
+        <tr>
+            <th>Total Games Played</th>
+            <td><%- gamesPlayed %></td>
+        </tr>
+        <tr>
+            <th>Total Wins</th>
+            <td><%- wins %></td>
+        </tr>
+        <tr>
+            <th>Total Loses</th>
+            <td><%- loses %></td>
+        </tr>
+        <tr>
+            <th>Total Points For</th>
+            <td><%- totalPointsFor %></td>
+        </tr>
+        <tr>
+            <th>Total Points Against</th>
+            <td><%- totalPointsAgainst %></td>
+        </tr>
+        <tr>
+            <th>Average Points per Game</th>
+            <td><%- avgPpg %></td>
+        </tr>
+        <tr>
+            <th>Average Points Scored Against per Game</th>
+            <td><%- avgOPpg %></td>
+        </tr>
+    </table>
+    <a href="/">Go Back</a>
+</body>
+</html>
