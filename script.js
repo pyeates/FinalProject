@@ -53,8 +53,6 @@ const ids = new Map([
 
 /*
 API STUFF
-right now does nothing but logs statistics in a json to the console for one team
-the team parameter in the url is relative to the team ID
 NBA ids range from 132 to 161
 */
 const url = 'https://api-basketball.p.rapidapi.com/statistics?season=2022-2023&league=12&team=133';
@@ -66,6 +64,7 @@ const options = {
   }
 };
 
+//Using Mongo
 async function insertPerson(databaseAndCollection, person) {
   try {
       await client.connect();
@@ -77,6 +76,7 @@ async function insertPerson(databaseAndCollection, person) {
   }
 }
 
+//UsingMongo
 async function getEveryone(databaseAndCollection) {
   try {
       await client.connect()
@@ -98,6 +98,7 @@ async function getEveryone(databaseAndCollection) {
   }
 }
 
+//Using Mongo
 async function containsPerson(databaseAndCollection, name) {
   try {
     await client.connect()
@@ -119,6 +120,7 @@ async function containsPerson(databaseAndCollection, name) {
   }
 }
 
+//Using Mongo
 async function updatePerson(databaseAndCollection, name, newTeam) {
   try {
     await client.connect()
@@ -137,6 +139,7 @@ async function updatePerson(databaseAndCollection, name, newTeam) {
   }
 }
 
+//using express and node
 app.get("/", async (request, response) => {
   let string = await getEveryone(databaseAndCollection)
   let variables = {
@@ -181,7 +184,6 @@ app.post("/",  async (request, response) => {
       avgOPpg : result.response.points.against.average.all
     
     }
-    //console.log("gamesPlayed" + result.response.games.played.all)
   } catch (error) {
     console.error(error);
   }
